@@ -17,7 +17,7 @@ describe('distance', function() {
     var value2 = distance('DWAYNE', 'DUANE');
     assert.closeTo(value2, 0.84, 0.001);
 
-    var value2 = distance('DIXON', 'DICKSONX');
-    assert.closeTo(value2, 0.814, 0.001);
+    var value3 = distance('DIXON', 'DICKSONX');
+    assert.closeTo(value3, 0.814, 0.001);
   });
 });

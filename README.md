@@ -1,5 +1,9 @@
-# jaro-winkler
-A string similarity function using the Jaro-Winkler distance metric.
+# Jaro-Winkler
+
+A string similarity function using the Jaro-Winkler distance metric. Returns a
+number between 0 and 1. A 0 being no similarity and a 1 being an exact match.
+
+Read more about it [on Wikipedia](http://en.wikipedia.org/wiki/Jaro–Winkler_distance).
 
 ## Install
 
@@ -7,7 +11,7 @@ A string similarity function using the Jaro-Winkler distance metric.
 npm install jaro-winkler
 ```
 
-## Basic Usage
+## Usage Examples
 
 ```
 var distance = require('jaro-winkler');
