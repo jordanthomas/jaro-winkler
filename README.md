@@ -4,7 +4,7 @@ A string similarity function using the Jaro-Winkler distance metric.
 ## Install
 
 ```
-install command here
+npm install jaro-winkler
 ```
 
 ## Basic Usage
