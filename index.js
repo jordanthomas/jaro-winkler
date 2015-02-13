@@ -1,9 +1,27 @@
-function distance(s1, s2) {
+function extend(a, b) {
+  for (var property in b) {
+    if (b.hasOwnProperty(property)) {
+      a[property] = b[property];
+    }
+  }
+
+  return a;
+}
+
+function distance(s1, s2, options) {
   var m = 0;
+  var defaults = { caseSensitive: true };
+  var settings = extend(defaults, options);
 
   // Exit early if either are empty.
   if ( s1.length === 0 || s2.length === 0 ) {
     return 0;
+  }
+
+  // Convert to upper if case-sensetive is false.
+  if (!settings.caseSensitive) {
+    s1 = s1.toUpperCase();
+    s2 = s2.toUpperCase();
   }
 
   // Exit early if they're an exact match.

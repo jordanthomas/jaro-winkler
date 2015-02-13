@@ -20,4 +20,10 @@ describe('distance', function() {
     var value3 = distance('DIXON', 'DICKSONX');
     assert.closeTo(value3, 0.814, 0.001);
   });
+
+  it('should ignore case when asked', function() {
+    var on  = distance('jArO', 'JaRo', { caseSensitive: false });
+    var off = distance('jaro', 'jaro');
+    assert.equal(on, off);
+  });
 });
