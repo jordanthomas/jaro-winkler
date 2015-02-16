@@ -18,7 +18,7 @@ function distance(s1, s2, options) {
     return 0;
   }
 
-  // Convert to upper if case-sensetive is false.
+  // Convert to upper if case-sensitive is false.
   if (!settings.caseSensitive) {
     s1 = s1.toUpperCase();
     s2 = s2.toUpperCase();
