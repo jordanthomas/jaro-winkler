@@ -24,4 +24,13 @@ distance('DWAYNE', 'DUANE');
 
 distance('DIXON', 'DICKSONX');
 // 0.814
+
+
+// Case Insensitive
+
+distance('MARTHA', 'MARTHA');
+// 1
+
+distance('mArThA', 'MaRtHa', { caseSensitive: false });
+// 1
 ```
