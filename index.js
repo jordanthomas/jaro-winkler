@@ -1,3 +1,5 @@
+'use strict';
+
 function extend(a, b) {
   for (var property in b) {
     if (b.hasOwnProperty(property)) {
@@ -33,11 +35,11 @@ function distance(s1, s2, options) {
   var s1Matches = new Array(s1.length);
   var s2Matches = new Array(s2.length);
 
-  for ( i = 0; i < s1.length; i++ ) {
+  for ( var i = 0; i < s1.length; i++ ) {
     var low  = (i >= range) ? i - range : 0;
     var high = (i + range <= s2.length) ? (i + range) : (s2.length - 1);
 
-    for ( j = low; j <= high; j++ ) {
+    for ( var j = low; j <= high; j++ ) {
       if ( s1Matches[i] !== true && s2Matches[j] !== true && s1[i] === s2[j] ) {
         ++m;
         s1Matches[i] = s2Matches[j] = true;
@@ -52,11 +54,12 @@ function distance(s1, s2, options) {
   }
 
   // Count the transpositions.
-  var k = n_trans = 0;
+  var k = 0;
+  var n_trans = 0;
 
-  for ( i = 0; i < s1.length; i++ ) {
+  for ( var i = 0; i < s1.length; i++ ) {
     if ( s1Matches[i] === true ) {
-      for ( j = k; j < s2.length; j++ ) {
+      for ( var j = k; j < s2.length; j++ ) {
         if ( s2Matches[j] === true ) {
           k = j + 1;
           break;
