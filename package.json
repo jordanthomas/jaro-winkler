@@ -4,7 +4,8 @@
   "description": "A string similarity function using the Jaro-Winkler distance metric.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run lint && mocha",
+    "lint": "jshint index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/jordanthomas/jaro-winkler",
   "devDependencies": {
     "chai": "^1.10.0",
+    "jshint": "^2.6.0",
     "mocha": "^2.1.0"
   }
 }
