@@ -14,6 +14,8 @@ function distance(s1, s2, options) {
   var m = 0;
   var defaults = { caseSensitive: true };
   var settings = extend(defaults, options);
+  var i;
+  var j;
 
   // Exit early if either are empty.
   if ( s1.length === 0 || s2.length === 0 ) {
@@ -35,11 +37,11 @@ function distance(s1, s2, options) {
   var s1Matches = new Array(s1.length);
   var s2Matches = new Array(s2.length);
 
-  for ( var i = 0; i < s1.length; i++ ) {
+  for ( i = 0; i < s1.length; i++ ) {
     var low  = (i >= range) ? i - range : 0;
     var high = (i + range <= s2.length) ? (i + range) : (s2.length - 1);
 
-    for ( var j = low; j <= high; j++ ) {
+    for ( j = low; j <= high; j++ ) {
       if ( s1Matches[i] !== true && s2Matches[j] !== true && s1[i] === s2[j] ) {
         ++m;
         s1Matches[i] = s2Matches[j] = true;
@@ -55,11 +57,11 @@ function distance(s1, s2, options) {
 
   // Count the transpositions.
   var k = 0;
-  var n_trans = 0;
+  var numTrans = 0;
 
-  for ( var i = 0; i < s1.length; i++ ) {
+  for ( i = 0; i < s1.length; i++ ) {
     if ( s1Matches[i] === true ) {
-      for ( var j = k; j < s2.length; j++ ) {
+      for ( j = k; j < s2.length; j++ ) {
         if ( s2Matches[j] === true ) {
           k = j + 1;
           break;
@@ -67,12 +69,12 @@ function distance(s1, s2, options) {
       }
 
       if ( s1[i] !== s2[j] ) {
-        ++n_trans;
+        ++numTrans;
       }
     }
   }
 
-  var weight = (m / s1.length + m / s2.length + (m - (n_trans / 2)) / m) / 3;
+  var weight = (m / s1.length + m / s2.length + (m - (numTrans / 2)) / m) / 3;
   var l      = 0;
   var p      = 0.1;
 
@@ -85,6 +87,6 @@ function distance(s1, s2, options) {
   }
 
   return weight;
-};
+}
 
 module.exports = distance;
