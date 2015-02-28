@@ -1,14 +1,6 @@
-'use strict';
+(function (root) {
+  'use strict';
 
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define([], factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
-  } else {
-    root.distance = factory();
-  }
-}(this, function () {
   function extend(a, b) {
     for (var property in b) {
       if (b.hasOwnProperty(property)) {
@@ -98,5 +90,11 @@
     return weight;
   }
 
-  return distance;
-}));
+  if (typeof define === 'function' && define.amd) {
+    define([], distance);
+  } else if (typeof exports === 'object') {
+    module.exports = distance;
+  } else {
+    root.distance = distance;
+  }
+})(this);
