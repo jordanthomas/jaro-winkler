@@ -7,11 +7,12 @@ Read more about it [on Wikipedia](http://en.wikipedia.org/wiki/Jaro–Winkler_di
 
 ## Install
 
-```
-npm install jaro-winkler
-```
+Install in your Node project using npm as usual; `npm install jaro-winkler`. It
+also works in the browser, just include the source within `index.js` in your
+project however you prefer. Note that the `distance` function will be added to
+the global scope if it's not included with a tool lke Browserify.
 
-## Usage Examples
+## Example Usage
 
 ```
 var distance = require('jaro-winkler');

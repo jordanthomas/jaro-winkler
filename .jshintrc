@@ -16,5 +16,8 @@
   "eqnull": true,
   "strict": true,
   "mocha": true,
-  "node": true
+  "node": true,
+  "globals": {
+    "define": false
+  }
 }
