@@ -1,5 +1,5 @@
-var assert   = require('chai').assert;
-var distance = require('../');
+var distance = typeof require === 'function' ? require('..') : window.distance;
+var assert = typeof require === 'function' ? require('chai').assert : window.chai.assert;
 
 describe('distance', function() {
   it('should return a number', function() {
