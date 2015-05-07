@@ -1,6 +1,6 @@
 {
   "name": "jaro-winkler",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A string similarity function using the Jaro-Winkler distance metric.",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,14 @@
     "type": "git",
     "url": "https://github.com/jordanthomas/jaro-winkler"
   },
+  "keywords": [
+    "distance",
+    "metric",
+    "jaro",
+    "winkler",
+    "jaro-winkler",
+    "compare"
+  ],
   "author": "Jordan Thomas",
   "license": "MIT",
   "bugs": {
