@@ -27,7 +27,7 @@
   "homepage": "https://github.com/jordanthomas/jaro-winkler",
   "devDependencies": {
     "chai": "^1.10.0",
-    "jshint": "^2.6.0",
-    "mocha": "^2.1.0"
+    "jshint": "^2.9.2",
+    "mocha": "^2.5.3"
   }
 }
