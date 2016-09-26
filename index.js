@@ -91,7 +91,7 @@
   }
 
   if (typeof define === 'function' && define.amd) {
-    define([], distance);
+    define([], function() {return distance});
   } else if (typeof exports === 'object') {
     module.exports = distance;
   } else {
