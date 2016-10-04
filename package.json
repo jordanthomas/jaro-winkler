@@ -1,6 +1,6 @@
 {
   "name": "jaro-winkler",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "A string similarity function using the Jaro-Winkler distance metric.",
   "main": "index.js",
   "scripts": {
